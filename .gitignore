@@ -1,57 +1,74 @@
-# Python bytecode
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environments
-.venv/
-venv/
-env/
-ENV/
+# Byte-compiled / optimized / DLL files
+*.so
 
-# Packaging
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+.venv/
 build/
+develop-eggs/
 dist/
+downloads/
+eggs/
 .eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
 *.egg-info/
+.installed.cfg
 *.egg
 
-# Jupyter
-.ipynb_checkpoints/
+# Jupyter Notebook checkpoints and outputs
+.ipynb_checkpoints
+# Clear notebook outputs if you track ipynb but want no outputs
+# (optional, uncomment if desired)
+# .ipynb_checkpoints/
+# .ipynb
 
-# IDE
+# VS Code
 .vscode/
-.idea/
 
-# OS
+# macOS files
 .DS_Store
-Thumbs.db
 
 # Logs and databases
 *.log
-*.sqlite
 *.sqlite3
-*.db
 
-# Secrets
+# Environment variables / secrets
 .env
 .env.*
+kaggle.json
+credentials.json
 
-# Tests / coverage
-.pytest_cache/
+# PyCharm
+.idea/
+
+# Unit test / coverage
+.coverage
 .tox/
 .nox/
-.coverage
+.pytest_cache/
 
 # C extensions
-*.so
 *.pyd
 
-# Data and outputs (adjust if you want to track any of these)
+# Data files (raw/processed) - usually keep out of Git
 data/
 data_raw/
 data_processed/
 processed/
+
+# Model artifacts / trained models
 models/
 *.joblib
 *.pkl
@@ -60,3 +77,16 @@ models/
 
 # Streamlit cache
 .streamlit/
+
+# Docker
+docker-compose.override.yml
+Dockerfile
+
+# Git LFS pointer files (if used)
+
+
+# Other OS
+Thumbs.db
+
+# Keep this repo tidy
+resume_analysis.ipynb_checkpoints/
