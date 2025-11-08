@@ -383,9 +383,15 @@ print("Top negative features:", feature_names[top_neg])
 processed_path = DATA_PATH / "processed"
 processed_path.mkdir(exist_ok=True)
 df.to_csv(processed_path / "resumes_processed.csv", index=False)
-# Save model (optional)
+
+# Save model and label encoder
 import joblib
-joblib.dump(pipeline, processed_path / "resume_classifier_lr.joblib")
+model_data = {
+    'pipeline': pipeline,
+    'label_encoder': le if 'le' in locals() else None,
+    'target_col': target_col
+}
+joblib.dump(model_data, processed_path / "resume_classifier_lr.joblib")
 
 
 # %%  
